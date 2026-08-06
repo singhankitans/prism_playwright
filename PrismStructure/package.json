@@ -1,0 +1,22 @@
+{
+  "name": "qa-ai-practical-assessment-toolshop",
+  "version": "1.0.0",
+  "description": "Prism Playwright UI + API automation for Practice Software Testing Toolshop",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:regression": "npx playwright test --grep @regression",
+    "test:ui": "npx playwright test tests/UI",
+    "test:api": "npx playwright test tests/API",
+    "test:ui:smoke": "npx playwright test tests/UI --grep @smoke",
+    "test:api:smoke": "npx playwright test tests/API --grep @smoke",
+    "report": "npx playwright show-report execution-reports/html"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^20.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
