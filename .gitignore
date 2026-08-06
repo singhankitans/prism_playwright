@@ -1,0 +1,11 @@
+node_modules/
+PrismStructure/node_modules/
+PrismStructure/test-results/
+PrismStructure/execution-reports/html/
+playwright-report/
+test-results/
+.DS_Store
+*.log
+storeBrowserState.json
+.env.local
+extractedImg/
