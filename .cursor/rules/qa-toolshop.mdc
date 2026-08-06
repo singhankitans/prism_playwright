@@ -1,0 +1,15 @@
+---
+description: QA automation conventions for Toolshop PrismStructure
+globs: PrismStructure/**/*
+alwaysApply: false
+---
+
+# Toolshop QA Rules
+
+- Prefer Playwright `data-test` locators (`testIdAttribute: data-test`).
+- Keep Page Object pattern under `UI/pageobjects` and API helpers under `API/utilities`.
+- Cap automated cases: roughly 5–8 per UI and API tier; tag `@smoke` / `@regression`.
+- Checkout: click Confirm (`finish`) twice for invoice generation; assert INV-*.
+- Never commit secrets, bearer tokens, or real PII.
+- Prefer unique synthetic emails from `testDataFactory`.
+- Select in-stock products via API before UI purchase flows.
