@@ -19,7 +19,6 @@ qa-ai-practical-assessment/
 ├── .cursor/
 │   ├── rules/
 │   └── skills/
-└── scripts/                        # optional probe helpers
 ```
 
 | Item | Status |
