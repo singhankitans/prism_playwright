@@ -15,8 +15,7 @@ qa-ai-practical-assessment/
 ├── SUBMISSION_CHECKLIST.md
 ├── ai-prompts/
 ├── .cursor/rules/
-├── .cursor/skills/
-└── scripts/
+└── .cursor/skills/
 ```
 
 ## Project Information

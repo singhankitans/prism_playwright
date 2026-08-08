@@ -23,7 +23,6 @@ qa-ai-practical-assessment/
 ├── .cursor/
 │   ├── rules/
 │   └── skills/
-└── scripts/                 # exploratory probe helpers
 ```
 
 ### Quick start

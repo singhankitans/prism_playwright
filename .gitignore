@@ -4,18 +4,7 @@ qa-ai-practical-assessment/PrismStructure/node_modules/
 qa-ai-practical-assessment/PrismStructure/test-results/
 qa-ai-practical-assessment/PrismStructure/execution-reports/html/
 playwright-report/
-test-results/
 .DS_Store
 *.log
-storeBrowserState.json
 .env.local
-extractedImg/
-# Legacy root framework leftovers (not part of assessment package)
-/API/
-/UI/
-/commonUtils/
-/tests/
-/package.json
-/package-lock.json
-/playwright.config.js
-/Jenkinsfile-UI-Automation
+storeBrowserState.json

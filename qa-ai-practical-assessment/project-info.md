@@ -71,8 +71,7 @@ qa-ai-practical-assessment/
 ├── SUBMISSION_CHECKLIST.md
 ├── ai-prompts/
 ├── .cursor/rules/
-├── .cursor/skills/
-└── scripts/
+└── .cursor/skills/
 ```
 
 See `readme.md` for setup/execution. Prompt history lives in `ai-prompts/`. Cursor guidance in `.cursor/rules/`. Checklist: `SUBMISSION_CHECKLIST.md`.
