@@ -60,4 +60,19 @@ This assessment validates the Toolshop ecommerce lifecycle for a **new customer*
 
 ## Repository Layout
 
-See `readme.md` for setup/execution. Prompt history lives in `ai-prompts/`. Cursor guidance in `.cursor/rules/`.
+Assessment package root: **`qa-ai-practical-assessment/`**
+
+```text
+qa-ai-practical-assessment/
+├── FunctionalTestCase.csv
+├── PrismStructure/          # UI + API Playwright + execution-reports
+├── project-info.md
+├── readme.md
+├── SUBMISSION_CHECKLIST.md
+├── ai-prompts/
+├── .cursor/rules/
+├── .cursor/skills/
+└── scripts/
+```
+
+See `readme.md` for setup/execution. Prompt history lives in `ai-prompts/`. Cursor guidance in `.cursor/rules/`. Checklist: `SUBMISSION_CHECKLIST.md`.
