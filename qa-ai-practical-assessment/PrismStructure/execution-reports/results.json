@@ -1,0 +1,745 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/playwright.config.js",
+    "rootDir": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "execution-reports/html",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "execution-reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "API/toolshop.api.spec.js",
+      "file": "API/toolshop.api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Toolshop API – Smoke",
+          "file": "API/toolshop.api.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "API-01 Register a new user @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1290,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:28:41.213Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--4fab5-1-Register-a-new-user-smoke-chromium/attachments/API-evidence-c05a5bc6b029247f83c383e0ef177b48e7a58302.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--4fab5-1-Register-a-new-user-smoke-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6cc5333458db21c7eeb4-3161cae1e5f07396c02a",
+              "file": "API/toolshop.api.spec.js",
+              "line": 7,
+              "column": 3
+            },
+            {
+              "title": "API-02 Login returns bearer token @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1626,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:28:43.023Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--76800--returns-bearer-token-smoke-chromium/attachments/API-evidence-33f2c0a3fc738bbc85caa038d44aba6a4f748d66.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--76800--returns-bearer-token-smoke-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6cc5333458db21c7eeb4-0b4e9d91743dbfb25261",
+              "file": "API/toolshop.api.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "API-03 Create a new cart @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 878,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:28:44.662Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--9d9c5--03-Create-a-new-cart-smoke-chromium/attachments/API-evidence-ffd84de23fc47dae86dce063498b487d24770e9b.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--9d9c5--03-Create-a-new-cart-smoke-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6cc5333458db21c7eeb4-221f5844a81e47091af7",
+              "file": "API/toolshop.api.spec.js",
+              "line": 42,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Toolshop API – Regression",
+          "file": "API/toolshop.api.spec.js",
+          "line": 56,
+          "column": 6,
+          "specs": [
+            {
+              "title": "API-04 Add product to cart and verify contents @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4102,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:28:45.547Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--55169--verify-contents-regression-chromium/attachments/API-evidence-4f74c1b17952fc3369db0df0465afae5e9c8bfdf.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--55169--verify-contents-regression-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6cc5333458db21c7eeb4-3dab6f1214976fe32ac8",
+              "file": "API/toolshop.api.spec.js",
+              "line": 57,
+              "column": 3
+            },
+            {
+              "title": "API-05 Generate COD invoice for cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6652,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:28:49.657Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--82d03-invoice-for-cart-regression-chromium/attachments/API-evidence-68372d7dac5f59ca8b0e59f5d4acb1acfe21a3dd.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--82d03-invoice-for-cart-regression-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6cc5333458db21c7eeb4-49010412d48e81c21333",
+              "file": "API/toolshop.api.spec.js",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "API-06 List invoices contains newly created invoice @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5423,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:28:56.318Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--0a3e8--created-invoice-regression-chromium/attachments/API-evidence-c8fae8a8e7727ba334e56bc32177eae409400a39.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--0a3e8--created-invoice-regression-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6cc5333458db21c7eeb4-e50a47443fda61e2e812",
+              "file": "API/toolshop.api.spec.js",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "API-07 Invalid login and unauthorized invoice creation @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8096,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:29:01.749Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "API-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--68836-invoice-creation-regression-chromium/attachments/API-evidence-d54671a74737e288bf697dc3e09a68f5cf78276f.png"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/API-toolshop.api-Toolshop--68836-invoice-creation-regression-chromium/test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6cc5333458db21c7eeb4-bd0b80e86a32a6d99494",
+              "file": "API/toolshop.api.spec.js",
+              "line": 150,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "UI/toolshop.ui.spec.js",
+      "file": "UI/toolshop.ui.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Toolshop UI – Smoke",
+          "file": "UI/toolshop.ui.spec.js",
+          "line": 13,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-01 Home page lists products @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4224,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:29:09.864Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-1d091-e-page-lists-products-smoke-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "UI-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-1d091-e-page-lists-products-smoke-chromium/attachments/UI-evidence-068d2a02c6807d64cddb3f7570f97f58ca8038c3.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1ff6104a8c0344aae30-8b06d872441f933ce432",
+              "file": "UI/toolshop.ui.spec.js",
+              "line": 14,
+              "column": 3
+            },
+            {
+              "title": "UI-02 Register a new customer @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3044,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:29:14.094Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-1643f-gister-a-new-customer-smoke-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "UI-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-1643f-gister-a-new-customer-smoke-chromium/attachments/UI-evidence-1211d25eba9de5af44dfbdd492b47f9eb1786408.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1ff6104a8c0344aae30-a2dffd540f2253f128da",
+              "file": "UI/toolshop.ui.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "UI-03 Login with valid credentials @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4283,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:29:17.146Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-74f39-ith-valid-credentials-smoke-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "UI-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-74f39-ith-valid-credentials-smoke-chromium/attachments/UI-evidence-3252cece929470783d2936460b1c204b9a14ef74.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1ff6104a8c0344aae30-6b1550d076602a26fb87",
+              "file": "UI/toolshop.ui.spec.js",
+              "line": 29,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Toolshop UI – Regression",
+          "file": "UI/toolshop.ui.spec.js",
+          "line": 41,
+          "column": 6,
+          "specs": [
+            {
+              "title": "UI-04 Invalid login shows an error @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2362,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:29:21.438Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-729d5-n-shows-an-error-regression-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "UI-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-729d5-n-shows-an-error-regression-chromium/attachments/UI-evidence-305efc29ac40bd39dc6e290a1f2b0fcef5e17e8a.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1ff6104a8c0344aae30-8897c9040b379e5d70e7",
+              "file": "UI/toolshop.ui.spec.js",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "UI-05 Add in-stock product and update quantity in cart @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12070,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:29:23.808Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-1742c-quantity-in-cart-regression-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "UI-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-1742c-quantity-in-cart-regression-chromium/attachments/UI-evidence-08dd29f791794d0fa56ab922335e84a574ff79fd.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1ff6104a8c0344aae30-f1a2eecc234a4fb4dad9",
+              "file": "UI/toolshop.ui.spec.js",
+              "line": 49,
+              "column": 3
+            },
+            {
+              "title": "UI-06 E2E checkout COD with double confirm and invoice @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16057,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T06:29:35.888Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-4ce9c-firm-and-invoice-regression-chromium/test-finished-1.png"
+                        },
+                        {
+                          "name": "UI-evidence",
+                          "contentType": "image/png",
+                          "path": "/Users/ankitasingh/Downloads/prism_playwright/qa-ai-practical-assessment/PrismStructure/test-results/UI-toolshop.ui-Toolshop-UI-4ce9c-firm-and-invoice-regression-chromium/attachments/UI-evidence-61c521a24db56b7fb3a20016d799a02d5d5f77cf.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d1ff6104a8c0344aae30-ceaebdad8141381eb49b",
+              "file": "UI/toolshop.ui.spec.js",
+              "line": 70,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-08T06:28:40.734Z",
+    "duration": 71283.524,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

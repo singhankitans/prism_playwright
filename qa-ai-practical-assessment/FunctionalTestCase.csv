@@ -1,0 +1,29 @@
+TestCaseID,Title,Type,Suite,Priority,Preconditions,Steps,ExpectedResult,RelatedAC,Status
+M-01,Register new customer with valid details,Functional/Positive,Smoke,High,User is not logged in; open Toolshop home,"1. Open Sign in > Register
+2. Enter valid first/last name DOB address (include house number) phone email password
+3. Click Register","User is registered and redirected to login (or authenticated state). No validation errors.",AC1,Ready
+M-02,Login with registered credentials,Functional/Positive,Smoke,High,User already registered,"1. Open Sign in
+2. Enter registered email/password
+3. Click Login","User lands in account area; nav menu shows user name; Sign in replaced by account menu.",AC1,Designed
+M-03,Login with invalid password,Negative,Regression,Medium,Any registered or unknown email,"1. Open Sign in
+2. Enter email with wrong password
+3. Click Login","Login fails; error message shown; user remains unauthenticated.",AC1,Designed
+M-04,Browse catalog and open product details,Functional/Positive,Smoke,High,Home page loaded,"1. Verify product cards on home
+2. Open an in-stock product
+3. Verify name price quantity controls","Product detail shows name price add-to-cart; out-of-stock products disable purchase path.",AC2,Designed
+M-05,Add multiple items and update quantity,Functional/Edge,Regression,High,Logged-in user; in-stock product,"1. Open product
+2. Increase quantity to 2
+3. Add to cart
+4. Open cart","Cart quantity badge = 2; cart line shows product and updated qty/line price.",AC2,Designed
+M-06,Checkout with Cash on Delivery and double Confirm for invoice,Functional/E2E,Regression,Critical,Logged-in user with items in cart,"1. Cart > Proceed (sign-in step) > Proceed (address)
+2. Ensure billing address valid including house number (TG / 1234AA / Zoey Shore)
+3. Proceed to payment
+4. Select Cash on Delivery
+5. Click Confirm once (payment success)
+6. Click Confirm again (invoice generation)
+7. Open My Invoices","First confirm shows Payment was successful; second confirm shows Thanks for your order with INV-*; invoice listed under My Invoices.",AC2,Designed
+M-07,Verify profile information after login,Functional/Positive,Regression,Medium,Registered user logged in,"1. Open account menu
+2. Open My Profile
+3. Review name email address fields","Profile shows registration data (name/email/address) consistently.",AC1,Designed
+M-08,Prevent checkout when cart is empty,Negative,Regression,Medium,Logged-in user empty cart,"1. Open cart with no items
+2. Attempt proceed/checkout","User cannot complete payment/invoice; empty-cart messaging or disabled proceed path.",AC2,Designed

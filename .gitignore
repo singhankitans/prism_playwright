@@ -1,0 +1,10 @@
+node_modules/
+**/node_modules/
+qa-ai-practical-assessment/PrismStructure/node_modules/
+qa-ai-practical-assessment/PrismStructure/test-results/
+qa-ai-practical-assessment/PrismStructure/execution-reports/html/
+playwright-report/
+.DS_Store
+*.log
+.env.local
+storeBrowserState.json

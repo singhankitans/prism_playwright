@@ -1,0 +1,8 @@
+node_modules/
+execution-reports/html/
+test-results/
+playwright-report/
+.auth/
+*.log
+.env.local
+storeBrowserState.json
