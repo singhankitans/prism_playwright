@@ -1,9 +1,10 @@
 const { test, expect } = require("@playwright/test");
 const { ApiClient } = require("../../API/utilities/apiClient");
 const { buildUniqueUser, billingAddress } = require("../../commonUtils/testDataFactory");
+const { saveScreenshotEvidence } = require("../../commonUtils/evidence");
 
 test.describe("Toolshop API – Smoke", () => {
-  test("API-01 Register a new user @smoke", async ({ request }) => {
+  test("API-01 Register a new user @smoke", async ({ request, page }, testInfo) => {
     const api = new ApiClient(request);
     const user = buildUniqueUser("api.reg");
     const response = await api.register(user);
@@ -11,9 +12,14 @@ test.describe("Toolshop API – Smoke", () => {
     const body = await response.json();
     expect(body.email).toBe(user.email);
     expect(body.id).toBeTruthy();
+    await saveScreenshotEvidence(page, testInfo, {
+      tier: "API",
+      renderCard: true,
+      payload: { status: 201, email: body.email, id: body.id },
+    });
   });
 
-  test("API-02 Login returns bearer token @smoke", async ({ request }) => {
+  test("API-02 Login returns bearer token @smoke", async ({ request, page }, testInfo) => {
     const api = new ApiClient(request);
     const user = buildUniqueUser("api.login");
     expect((await api.register(user)).status()).toBe(201);
@@ -22,19 +28,36 @@ test.describe("Toolshop API – Smoke", () => {
     const body = await response.json();
     expect(body.access_token).toBeTruthy();
     expect(body.token_type).toBe("bearer");
+    await saveScreenshotEvidence(page, testInfo, {
+      tier: "API",
+      renderCard: true,
+      payload: {
+        status: 200,
+        token_type: body.token_type,
+        access_token: `${String(body.access_token).slice(0, 24)}...`,
+      },
+    });
   });
 
-  test("API-03 Create a new cart @smoke", async ({ request }) => {
+  test("API-03 Create a new cart @smoke", async ({ request, page }, testInfo) => {
     const api = new ApiClient(request);
     const response = await api.createCart();
     expect([200, 201]).toContain(response.status());
     const body = await response.json();
     expect(body.id).toBeTruthy();
+    await saveScreenshotEvidence(page, testInfo, {
+      tier: "API",
+      renderCard: true,
+      payload: { status: response.status(), cart_id: body.id },
+    });
   });
 });
 
 test.describe("Toolshop API – Regression", () => {
-  test("API-04 Add product to cart and verify contents @regression", async ({ request }) => {
+  test("API-04 Add product to cart and verify contents @regression", async ({
+    request,
+    page,
+  }, testInfo) => {
     const api = new ApiClient(request);
     const user = buildUniqueUser("api.cart");
     expect((await api.register(user)).status()).toBe(201);
@@ -53,9 +76,21 @@ test.describe("Toolshop API – Regression", () => {
     expect(cart.cart_items.length).toBeGreaterThan(0);
     expect(cart.cart_items[0].product_id).toBe(product.id);
     expect(cart.cart_items[0].quantity).toBe(2);
+    await saveScreenshotEvidence(page, testInfo, {
+      tier: "API",
+      renderCard: true,
+      payload: {
+        cart_id: cartId,
+        product_id: product.id,
+        quantity: cart.cart_items[0].quantity,
+      },
+    });
   });
 
-  test("API-05 Generate COD invoice for cart @regression", async ({ request }) => {
+  test("API-05 Generate COD invoice for cart @regression", async ({
+    request,
+    page,
+  }, testInfo) => {
     const api = new ApiClient(request);
     const user = buildUniqueUser("api.inv");
     expect((await api.register(user)).status()).toBe(201);
@@ -70,9 +105,22 @@ test.describe("Toolshop API – Regression", () => {
     const invoice = await invoiceRes.json();
     expect(invoice.invoice_number).toMatch(/^INV-/);
     expect(invoice.billing_country).toBe("TG");
+    await saveScreenshotEvidence(page, testInfo, {
+      tier: "API",
+      renderCard: true,
+      payload: {
+        status: 201,
+        invoice_number: invoice.invoice_number,
+        billing_country: invoice.billing_country,
+        total: invoice.total,
+      },
+    });
   });
 
-  test("API-06 List invoices contains newly created invoice @regression", async ({ request }) => {
+  test("API-06 List invoices contains newly created invoice @regression", async ({
+    request,
+    page,
+  }, testInfo) => {
     const api = new ApiClient(request);
     const user = buildUniqueUser("api.list");
     expect((await api.register(user)).status()).toBe(201);
@@ -88,11 +136,21 @@ test.describe("Toolshop API – Regression", () => {
     const list = await listRes.json();
     const found = (list.data || []).some((i) => i.invoice_number === created.invoice_number);
     expect(found).toBeTruthy();
+    await saveScreenshotEvidence(page, testInfo, {
+      tier: "API",
+      renderCard: true,
+      payload: {
+        invoice_number: created.invoice_number,
+        found_in_list: found,
+        list_total: list.total,
+      },
+    });
   });
 
   test("API-07 Invalid login and unauthorized invoice creation @regression", async ({
     request,
-  }) => {
+    page,
+  }, testInfo) => {
     const api = new ApiClient(request);
     const badLogin = await api.login("nouser@example.com", "BadPass1!");
     expect(badLogin.status()).toBe(401);
@@ -103,5 +161,13 @@ test.describe("Toolshop API – Regression", () => {
     await unauth.addToCart(cartId, product.id, 1);
     const invoiceRes = await unauth.createInvoice({ ...billingAddress, cart_id: cartId });
     expect(invoiceRes.status()).toBe(401);
+    await saveScreenshotEvidence(page, testInfo, {
+      tier: "API",
+      renderCard: true,
+      payload: {
+        invalid_login_status: badLogin.status(),
+        unauthorized_invoice_status: invoiceRes.status(),
+      },
+    });
   });
 });

@@ -91,7 +91,10 @@ After a run:
 
 - HTML: `PrismStructure/execution-reports/html/index.html` → `npm run report`
 - JSON: `PrismStructure/execution-reports/results.json`
-- Failures retain screenshots/traces under `PrismStructure/test-results/`
+- **Screenshots (all passed tests):** `PrismStructure/execution-reports/evidence/`
+  - `evidence/UI/` — UI-01 … UI-06 full-page captures
+  - `evidence/API/` — API-01 … API-07 result cards (token values redacted)
+- Failures also retain artifacts under `PrismStructure/test-results/`
 
 ## Cursor Rules
 

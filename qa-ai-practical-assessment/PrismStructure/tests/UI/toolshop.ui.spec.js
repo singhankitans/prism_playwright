@@ -2,6 +2,13 @@ const { test, expect } = require("@playwright/test");
 const { POManager } = require("../../UI/pageobjects/POManager");
 const { buildUniqueUser } = require("../../commonUtils/testDataFactory");
 const { ApiClient } = require("../../API/utilities/apiClient");
+const { saveScreenshotEvidence } = require("../../commonUtils/evidence");
+
+test.afterEach(async ({ page }, testInfo) => {
+  if (testInfo.status === "passed" || testInfo.status === "expected") {
+    await saveScreenshotEvidence(page, testInfo, { tier: "UI" });
+  }
+});
 
 test.describe("Toolshop UI – Smoke", () => {
   test("UI-01 Home page lists products @smoke", async ({ page }) => {

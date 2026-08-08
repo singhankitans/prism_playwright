@@ -17,9 +17,9 @@ module.exports = defineConfig({
   use: {
     baseURL: process.env.BASE_URL || "https://practicesoftwaretesting.com",
     headless: true,
-    screenshot: "only-on-failure",
+    screenshot: "on",
     video: "retain-on-failure",
-    trace: "retain-on-failure",
+    trace: "on-first-retry",
     testIdAttribute: "data-test",
     ignoreHTTPSErrors: true,
     ...devices["Desktop Chrome"],
